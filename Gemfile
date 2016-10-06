@@ -25,6 +25,12 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rubocop', '~> 0.40.0'
   gem 'overcommit'
+  gem 'rspec-rails', '~> 3.5'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 group :development do
