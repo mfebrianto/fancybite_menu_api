@@ -15,10 +15,10 @@
 #
 # Uncomment the following lines to make the configuration take effect.
 
-PreCommit:
-  RuboCop:
-    enabled: true
-    command: ['bundle', 'exec', 'rubocop'] # Invoke within Bundler context
+#PreCommit:
+#  RuboCop:
+#    enabled: true
+#    command: ['bundle', 'exec', 'rubocop'] # Invoke within Bundler context
 
 #  TrailingWhitespace:
 #    enabled: true

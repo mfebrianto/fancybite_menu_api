@@ -18,13 +18,14 @@ gem 'puma', '~> 3.0'
 # Cross-Origin Resource Sharing (CORS),
 # making cross-origin AJAX possible
 # gem 'rack-cors'
+# gem 'overcommit'
+gem 'unicorn', '~> 5.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to
   # stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rubocop', '~> 0.40.0'
-  gem 'overcommit'
   gem 'rspec-rails', '~> 3.5'
 end
 
