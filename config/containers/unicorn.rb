@@ -5,7 +5,7 @@ app_path = ENV['RAILS_ROOT']
 working_directory app_path
 
 # Define where Unicorn should write its PID file
-pid "#{app_path}/tmp/pids/unicorn.pid"
+# pid "#{app_path}/tmp/pids/unicorn.pid"
 
 # Bind Unicorn to the container's default route, at port 3000
 listen "0.0.0.0:3000"

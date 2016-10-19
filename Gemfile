@@ -20,6 +20,7 @@ gem 'puma', '~> 3.0'
 # gem 'rack-cors'
 # gem 'overcommit'
 gem 'unicorn', '~> 5.1'
+gem 'docker-sync', '~> 0.1.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to

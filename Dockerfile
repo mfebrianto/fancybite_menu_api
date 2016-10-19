@@ -5,7 +5,7 @@ FROM ruby:2.2.3-slim
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev mysql-client libmysqlclient-dev
 
 # Define where our application will live inside the image
-ENV RAILS_ROOT /var/www/fancybite_menu_api
+ENV RAILS_ROOT /var/www/fb_menu_api
 
 # Create application home. App server will need the pids dir so just create everything in one shot
 RUN mkdir -p $RAILS_ROOT/tmp/pids
@@ -19,15 +19,6 @@ WORKDIR $RAILS_ROOT
 COPY Gemfile Gemfile
 
 COPY Gemfile.lock Gemfile.lock
-
-# Prevent bundler warnings; ensure that the bundler version executed is >= that which created Gemfile.lock
-RUN gem install bundler
-
-# Finish establishing our Ruby environment
-RUN bundle install
-
-# Copy the Rails application into place
-COPY . .
 
 # Define the script we want run once the container boots
 # Use the "exec" form of CMD so our script shuts down gracefully on SIGTERM (i.e. `docker stop`)
